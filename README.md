@@ -31,6 +31,7 @@
 ## 备注
 
 1. 请在使用本程序前安装最新版本的firefox浏览器
-2. 请根据不同系统版本替换本程序中的驱动(src/third/party/geckodriver)
+2. 请根据不同系统版本替换本程序中的驱动(src/third_party/geckodriver)程序中的版本为mac版
 3. 驱动下载链接 https://github.com/mozilla/geckodriver/releases
 4. 浏览器对应驱动版本，请参考博客 https://blog.csdn.net/u013250071/article/details/78803230
+5. 由于搜狗对非登录情况下有条数限制，请用浏览器登录搜狗，将cookie拷贝到(src/class_files/constant里面的COOKIE_LIST下，直接替换即可)
