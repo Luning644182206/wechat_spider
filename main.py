@@ -5,6 +5,7 @@
 
 from src.class_files.search import Search
 from src.class_files.constant import *
+from src.class_files.data_clear import DataClear
 import pandas as pd
 import os,sys
 sys.path.append('./src/class_files')
@@ -16,10 +17,15 @@ if __name__ == '__main__':
         search_news = Search(key_word, base_url)
         search_news.search_news()
 
-    # 数据统计
     path = './src/data/news.csv'
     news = pd.read_csv(path, sep=',')
+
+    # 数据清洗
+    data_clear = DataClear(news)
+    data_clear.data_clear()
+
+    # 数据统计
     print(news)
     account_num = news.groupby(['account'])['account'].nunique()
-    print(df_new_1)
+    print(account_num)
 
